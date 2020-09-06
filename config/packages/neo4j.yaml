@@ -1,0 +1,8 @@
+neo4j:
+    connections:
+        default:
+            #            dsn: '%env(resolve:NEO4J_DEFAULT_CONNECTION_DSN)%'
+            scheme: http
+            host: exsymfonyneo4j_neo4j
+            username: neo4j
+            password: neo4j
