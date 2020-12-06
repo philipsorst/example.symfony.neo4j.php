@@ -1,21 +1,18 @@
 version: '3'
 services:
+
     web:
-        container_name: exsymfonyneo4j_web
-        build: ./docker/
+        image: 'dontdrinkandroot/php:20-04-7-4-dev'
         ports:
             - "8000:80"
         depends_on:
             - neo4j
         volumes:
             - ./:/var/www/
+            - ./docker/apache/000-default.conf:/etc/apache2/sites-available/000-default.conf
+
     neo4j:
-        container_name: exsymfonyneo4j_neo4j
+        image: neo4j:4.1
         ports:
             - "7474:7474"
             - "7687:7687"
-        image: neo4j:4.1
-        volumes:
-            - neo4j_data:$HOME/neo4j/data
-volumes:
-    neo4j_data:
