@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose -f docker-compose.yaml exec web bin/console "$@"
+docker exec -t github.com_philipsorst_example.symfony.neo4j.php_web-dev bin/console "$@"

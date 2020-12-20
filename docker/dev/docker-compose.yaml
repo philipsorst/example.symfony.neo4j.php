@@ -3,6 +3,7 @@ services:
 
     web:
         image: 'dontdrinkandroot/php:20-04-7-4-dev'
+        container_name: github.com_philipsorst_example.symfony.neo4j.php_web-dev
         ports:
             - "8000:80"
         depends_on:
@@ -13,6 +14,7 @@ services:
 
     neo4j:
         image: neo4j:4.2
+        container_name: github.com_philipsorst_example.symfony.neo4j.php_neo4j-dev
         ports:
             - "7474:7474"
             - "7687:7687"
