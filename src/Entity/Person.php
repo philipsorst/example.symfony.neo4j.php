@@ -23,7 +23,7 @@ class Person
     protected ?string $name = null;
 
     /**
-     * @OGM\Relationship(type="WORKS_AT", direction="OUTGOING", collection=true, mappedBy="persons", targetEntity="App\Entity\Department")
+     * @OGM\Relationship(type="WORKS_IN", direction="OUTGOING", collection=true, mappedBy="persons", targetEntity="App\Entity\Department")
      *
      * @var Department[]|Collection
      */

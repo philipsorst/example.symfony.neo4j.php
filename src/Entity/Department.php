@@ -23,7 +23,7 @@ class Department
     /**
      * @var Person[]|Collection
      *
-     * @OGM\Relationship(type="WORKS_AT", direction="INCOMING", collection=true, mappedBy="departments", targetEntity="App\Entity\Person")
+     * @OGM\Relationship(type="WORKS_IN", direction="INCOMING", collection=true, mappedBy="departments", targetEntity="App\Entity\Person")
      */
     protected $persons;
 
