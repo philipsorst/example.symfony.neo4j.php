@@ -29,6 +29,13 @@ class Person
      */
     protected $departments;
 
+    /**
+     * @OGM\Relationship(type="BELONGS_TO", direction="OUTGOING", collection=true, mappedBy="persons", targetEntity="App\Entity\Group")
+     *
+     * @var Group[]|Collection
+     */
+    protected $groups;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -55,5 +62,13 @@ class Person
     public function getDepartments()
     {
         return $this->departments;
+    }
+
+    /**
+     * @return Group[]|Collection
+     */
+    public function getGroups()
+    {
+        return $this->groups;
     }
 }
