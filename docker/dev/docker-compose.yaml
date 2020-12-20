@@ -8,11 +8,11 @@ services:
         depends_on:
             - neo4j
         volumes:
-            - ./:/var/www/
-            - ./docker/apache/000-default.conf:/etc/apache2/sites-available/000-default.conf
+            - ../../:/var/www/
+            - ./apache/000-default.conf:/etc/apache2/sites-available/000-default.conf
 
     neo4j:
-        image: neo4j:4.1
+        image: neo4j:4.2
         ports:
             - "7474:7474"
             - "7687:7687"
